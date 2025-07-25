@@ -2,6 +2,7 @@ import { getRandomUsers } from "@/actions/user.action";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import Link from "next/link";
 import { Avatar, AvatarImage } from "./ui/avatar";
+import FollowButton from "./FollowButton";
 // import FollowButton from "./FollowButton";
 
 async function WhoToFollow() {
@@ -32,7 +33,7 @@ async function WhoToFollow() {
                   <p className="text-muted-foreground">{user._count.followers} followers</p>
                 </div>
               </div>
-              {/* <FollowButton userId={user.id} /> */}
+              <FollowButton userId={user.id} />
             </div>
           ))}
         </div>
